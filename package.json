@@ -1,0 +1,28 @@
+{
+  "name": "bloxradar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "migrate": "node scripts/migrate.js",
+    "collect": "node src/collect.js",
+    "collect:dry": "node src/collect.js --dry",
+    "daily": "node src/daily.js",
+    "daily:dry": "node src/daily.js --dry",
+    "catalog": "node src/catalog.js",
+    "catalog:dry": "node src/catalog.js --dry",
+    "discover": "node src/discover.js",
+    "discover:dry": "node src/discover.js --dry",
+    "start": "node server.js",
+    "preview": "node scripts/preview.js",
+    "fixture": "node scripts/make-fixture.js",
+    "fixture:catalog": "node scripts/make-catalog-fixture.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.0"
+  }
+}

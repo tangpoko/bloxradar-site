@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/app.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<title>BloxRadar</title>
+</head>
+<body>
+<header class="site-head" id="top"></header>
+<main>
+  <div class="page-head">
+    <div class="crumb"><a href="/">Home</a></div>
+    <h1 id="title">&nbsp;</h1>
+    <p id="why" hidden></p>
+  </div>
+  <div id="body"></div>
+  <div class="pager" id="pager" hidden></div>
+</main>
+<script type="module" src="/assets/list.js"></script>
+</body>
+</html>

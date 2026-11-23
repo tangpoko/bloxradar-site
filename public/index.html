@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/app.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uplot@1.6.30/dist/uPlot.min.css">
+<title>BloxRadar. Live Roblox player counts</title>
+<meta name="description" content="Live player counts for Roblox games: what is breaking out, new all-time highs, top games, genres and studios.">
+</head>
+<body>
+<header class="site-head" id="top"></header>
+<main>
+  <h1 class="sr-only">Roblox games right now</h1>
+  <section class="hero" aria-label="Overview">
+    <div class="hero-main">
+      <div class="hero-num">
+        <div class="label"><span class="beat" aria-hidden="true"></span>Players on Roblox right now, in the games we track</div>
+        <div class="big num" id="b-total">&nbsp;</div>
+        <div class="hero-line">
+          <span id="b-change">&nbsp;</span>
+          <span class="muted">versus 24 hours ago</span>
+        </div>
+        <p class="hero-meta muted"><span class="num" id="b-games"></span> games, read every 10 minutes. Updated <span id="b-when"></span></p>
+      </div>
+      <div class="hero-chart">
+        <div class="tabs" role="tablist" aria-label="Time range">
+          <button class="tab" role="tab" type="button" id="tt-24h" data-r="24h" aria-selected="true" aria-controls="total-panel">24 hours</button>
+        </div>
+        <div id="total-panel" role="tabpanel" aria-labelledby="tt-24h">
+          <div id="total-chart" role="img" aria-label="Total players in the games we track over time"></div>
+          <p class="note" id="total-note" hidden></p>
+        </div>
+      </div>
+    </div>
+    <div class="spots" id="spots">
+      <div class="spot skel"></div><div class="spot skel"></div><div class="spot skel"></div><div class="spot skel"></div>
+    </div>
+  </section>
+  <div class="grid">
+    <section class="panel feature span-8" data-panel="breakouts" data-limit="6"></section>
+    <section class="panel span-4" data-panel="new-highs" data-limit="6"></section>
+    <section class="panel span-7" data-panel="top" data-limit="10"></section>
+    <section class="panel span-5" data-panel="top-earning" data-limit="10"></section>
+    <section class="panel span-5" data-panel="genres" data-limit="10"></section>
+    <section class="panel span-7" data-panel="trends" data-limit="10"></section>
+    <section class="panel span-6" data-panel="rising" data-limit="8"></section>
+    <section class="panel span-6" data-panel="saving" data-limit="8"></section>
+    <section class="panel span-6" data-panel="new-games" data-limit="8"></section>
+    <section class="panel span-6" data-panel="creators" data-limit="8"></section>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/uplot@1.6.30/dist/uPlot.iife.min.js"></script>
+<script type="module" src="/assets/home.js"></script>
+</body>
+</html>
